@@ -14,3 +14,10 @@
       <p>Текст</p>
   </li>
 */
+
+import { handleSubmit, handleDelete, renderAllTasks } from "./js/render-tasks.js";
+import refs from './js/refs.js'
+
+document.addEventListener('DOMContentLoaded', renderAllTasks);
+refs.taskForm.addEventListener('submit', handleSubmit);
+refs.taskList.addEventListener('click', handleDelete)
