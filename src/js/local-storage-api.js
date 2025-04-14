@@ -1,11 +1,12 @@
-export const TASKS_KEY = 'tasks';
+export const TASKS_KEY = 'Tasks';
+export const THEME_KEY = 'Theme';
 
-export function addDataToLocalStorage(value) {
-    const normalizedData = JSON.stringify(value);
-    localStorage.setItem(TASKS_KEY, normalizedData);
+export function addDataToLocalStorage(key, value) {
+  const normalizedData = JSON.stringify(value);
+  localStorage.setItem(key, normalizedData);
 }
 
-export function getDataFromLocalStorage() {
-    const lsData = localStorage.getItem(TASKS_KEY);
-    return lsData ? JSON.parse(lsData) : [];
+export function getDataFromLocalStorage(key) {
+  const lsData = localStorage.getItem(key);
+  return lsData ? JSON.parse(lsData) : [];
 }

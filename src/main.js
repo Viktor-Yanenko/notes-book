@@ -15,9 +15,16 @@
   </li>
 */
 
-import { handleSubmit, handleDelete, renderAllTasks } from "./js/render-tasks.js";
-import refs from './js/refs.js'
+import {
+  handleSubmit,
+  handleDelete,
+  renderAllTasks,
+} from './js/render-tasks.js';
+import refs from './js/refs.js';
+import { switchTheme, renderTheme } from './js/theme-switcher.js';
 
 document.addEventListener('DOMContentLoaded', renderAllTasks);
+document.addEventListener('DOMContentLoaded', renderTheme);
 refs.taskForm.addEventListener('submit', handleSubmit);
-refs.taskList.addEventListener('click', handleDelete)
+refs.taskList.addEventListener('click', handleDelete);
+refs.themeToggleButton.addEventListener('click', switchTheme);
