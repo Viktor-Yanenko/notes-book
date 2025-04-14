@@ -20,6 +20,6 @@ export function renderTheme() {
   if (lsTheme === 'light') {
     refs.body.classList.replace('theme-dark', 'theme-light');
   } else {
-    body.classList.replace('theme-light', 'theme-dark');
+    refs.body.classList.replace('theme-light', 'theme-dark');
   }
 }
